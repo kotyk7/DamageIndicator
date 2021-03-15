@@ -166,11 +166,6 @@ public class BloodListener implements Listener {
         checkBloodItem(e.getItem(), e);
     }
 
-    @EventHandler(priority = EventPriority.MONITOR)
-    public void onItemPickup(PlayerPickupItemEvent e) {
-        checkBloodItem(e.getItem(), e);
-    }
-
     @EventHandler
     public void onInventoryPickup(InventoryPickupItemEvent e) {
         checkBloodItem(e.getItem(), e);

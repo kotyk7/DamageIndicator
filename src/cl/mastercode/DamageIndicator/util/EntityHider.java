@@ -1,27 +1,6 @@
 package cl.mastercode.DamageIndicator.util;
 
 import com.comphenix.protocol.PacketType;
-import static com.comphenix.protocol.PacketType.Play.Server.ANIMATION;
-import static com.comphenix.protocol.PacketType.Play.Server.ATTACH_ENTITY;
-import static com.comphenix.protocol.PacketType.Play.Server.BLOCK_BREAK_ANIMATION;
-import static com.comphenix.protocol.PacketType.Play.Server.COLLECT;
-import static com.comphenix.protocol.PacketType.Play.Server.ENTITY_DESTROY;
-import static com.comphenix.protocol.PacketType.Play.Server.ENTITY_EFFECT;
-import static com.comphenix.protocol.PacketType.Play.Server.ENTITY_EQUIPMENT;
-import static com.comphenix.protocol.PacketType.Play.Server.ENTITY_HEAD_ROTATION;
-import static com.comphenix.protocol.PacketType.Play.Server.ENTITY_LOOK;
-import static com.comphenix.protocol.PacketType.Play.Server.ENTITY_METADATA;
-import static com.comphenix.protocol.PacketType.Play.Server.ENTITY_MOVE_LOOK;
-import static com.comphenix.protocol.PacketType.Play.Server.ENTITY_STATUS;
-import static com.comphenix.protocol.PacketType.Play.Server.ENTITY_TELEPORT;
-import static com.comphenix.protocol.PacketType.Play.Server.ENTITY_VELOCITY;
-import static com.comphenix.protocol.PacketType.Play.Server.NAMED_ENTITY_SPAWN;
-import static com.comphenix.protocol.PacketType.Play.Server.REL_ENTITY_MOVE;
-import static com.comphenix.protocol.PacketType.Play.Server.REMOVE_ENTITY_EFFECT;
-import static com.comphenix.protocol.PacketType.Play.Server.SPAWN_ENTITY;
-import static com.comphenix.protocol.PacketType.Play.Server.SPAWN_ENTITY_EXPERIENCE_ORB;
-import static com.comphenix.protocol.PacketType.Play.Server.SPAWN_ENTITY_LIVING;
-import static com.comphenix.protocol.PacketType.Play.Server.SPAWN_ENTITY_PAINTING;
 import com.comphenix.protocol.ProtocolLibrary;
 import com.comphenix.protocol.ProtocolManager;
 import com.comphenix.protocol.events.PacketAdapter;
@@ -43,6 +22,8 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.world.ChunkUnloadEvent;
 import org.bukkit.plugin.Plugin;
 
+import static com.comphenix.protocol.PacketType.Play.Server.*;
+
 /**
  * Original source: https://gist.github.com/aadnk/5871793
  *
@@ -54,7 +35,7 @@ public class EntityHider implements Listener {
     private static final PacketType[] ENTITY_PACKETS = {
             ENTITY_EQUIPMENT, ANIMATION, NAMED_ENTITY_SPAWN,
             COLLECT, SPAWN_ENTITY, SPAWN_ENTITY_LIVING, SPAWN_ENTITY_PAINTING, SPAWN_ENTITY_EXPERIENCE_ORB,
-            ENTITY_VELOCITY, REL_ENTITY_MOVE, ENTITY_LOOK, ENTITY_MOVE_LOOK, ENTITY_MOVE_LOOK,
+            ENTITY_VELOCITY, REL_ENTITY_MOVE, ENTITY_LOOK, REL_ENTITY_MOVE_LOOK, REL_ENTITY_MOVE_LOOK,
             ENTITY_TELEPORT, ENTITY_HEAD_ROTATION, ENTITY_STATUS, ATTACH_ENTITY, ENTITY_METADATA,
             ENTITY_EFFECT, REMOVE_ENTITY_EFFECT, BLOCK_BREAK_ANIMATION
 
